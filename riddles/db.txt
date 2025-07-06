@@ -1,0 +1,54 @@
+[
+  {
+    "id": 1,
+    "type": "Single",
+    "difficulty": "easy",
+    "name": "Easy Math 1",
+    "taskDescription": "5 + 3 = ",
+    "correctAnswer": "8"
+  },
+  {
+    "id": 2,
+    "type": "Single",
+    "difficulty": "easy",
+    "name": "Easy Math 2",
+    "taskDescription": "10 - 3 = ",
+    "correctAnswer": "7"
+  },
+  {
+    "id": 3,
+    "type": "multiple",
+    "difficulty": "medium",
+    "name": "Medium Math 3",
+    "taskDescription": "6 * 4 = ",
+    "correctAnswer": "24",
+    "choices": [
+      "22",
+      "32",
+      "24",
+      "12"
+    ]
+  },
+  {
+    "id": 4,
+    "type": "multiple",
+    "difficulty": "hard",
+    "name": "Hard Math 4",
+    "taskDescription": "6 * (4 - 2) = ",
+    "correctAnswer": "12",
+    "choices": [
+      "30",
+      "32",
+      "20",
+      "12"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Hard Math 5",
+    "taskDescription": "10 + (2 - 4) * 5 =",
+    "correctAnswer": "0",
+    "type": "basic",
+    "difficulty": "hard"
+  }
+]
