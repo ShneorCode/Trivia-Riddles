@@ -5,7 +5,8 @@
     "difficulty": "easy",
     "name": "Easy Math 1",
     "taskDescription": "5 + 3 = ",
-    "correctAnswer": "8"
+    "correctAnswer": "8",
+    "hint": "It's less than 10"
   },
   {
     "id": 2,
@@ -13,7 +14,8 @@
     "difficulty": "easy",
     "name": "Easy Math 2",
     "taskDescription": "10 - 3 = ",
-    "correctAnswer": "7"
+    "correctAnswer": "7",
+    "hint": "Between 6 and 8"
   },
   {
     "id": 3,
@@ -27,7 +29,8 @@
       "32",
       "24",
       "12"
-    ]
+    ],
+    "hint": "It's two dozens"
   },
   {
     "id": 4,
@@ -41,14 +44,22 @@
       "32",
       "20",
       "12"
-    ]
+    ],
+    "hint": "Think double six"
   },
   {
     "id": 5,
-    "name": "Hard Math 5",
-    "taskDescription": "10 + (2 - 4) * 5 =",
-    "correctAnswer": "0",
-    "type": "basic",
-    "difficulty": "hard"
+    "name": "Easy Math 3",
+    "taskDescription": "1 + 9 =",
+    "correctAnswer": "10",
+    "hint": "---",
+    "type": "multiple",
+    "difficulty": "easy",
+    "choices": [
+      "11",
+      "10",
+      "12",
+      "8"
+    ]
   }
 ]
