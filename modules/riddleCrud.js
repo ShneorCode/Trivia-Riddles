@@ -5,10 +5,11 @@ export function createRiddle() {
   const name = question("Enter riddle name: ");
   const task = question("Enter description: ");
   const answer = question("Enter correct answer: ");
+  const hint = question("Enter a hint for this riddle: ");
   const type = question("Type (basic/multiple): ");
   const difficulty = question("Difficulty (easy/medium/hard): ");
-  let choices = [];
 
+  let choices = [];
   if (type === "multiple") {
     for (let i = 0; i < 4; i++) {
       choices.push(question(`Choice ${i + 1}: `));
@@ -23,6 +24,7 @@ export function createRiddle() {
     name,
     taskDescription: task,
     correctAnswer: answer,
+    hint,
     type,
     difficulty,
     ...(type === "multiple" ? { choices } : {})
@@ -50,6 +52,18 @@ export function updateRiddle() {
   riddle.name = question(`Enter new name (${riddle.name}): `) || riddle.name;
   riddle.taskDescription = question(`Enter new task (${riddle.taskDescription}): `) || riddle.taskDescription;
   riddle.correctAnswer = question(`Enter new answer (${riddle.correctAnswer}): `) || riddle.correctAnswer;
+  riddle.hint = question(`Enter new hint (${riddle.hint || "none"}): `) || riddle.hint;
+  riddle.type = question(`Enter new type (${riddle.type}): `) || riddle.type;
+  riddle.difficulty = question(`Enter new difficulty (${riddle.difficulty}): `) || riddle.difficulty;
+
+  if (riddle.type === "multiple") {
+    riddle.choices = [];
+    for (let i = 0; i < 4; i++) {
+      riddle.choices.push(question(`Choice ${i + 1}: `));
+    }
+  } else {
+    delete riddle.choices;
+  }
 
   saveRiddles(riddles);
   console.log("Riddle updated.");

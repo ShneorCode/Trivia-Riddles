@@ -1,5 +1,4 @@
 import fs from 'fs';
-
 const FILE_PATH = './riddles/db.txt';
 
 export function loadRiddles() {
